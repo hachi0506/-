@@ -1,4 +1,6 @@
 fonts/
+input/
 output/stills/
 output/highlights/
 __pycache__/
+.venv/
