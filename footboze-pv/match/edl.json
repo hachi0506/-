@@ -1,0 +1,43 @@
+{
+  "source_title": "【第3回全日本ユース(U-18)フットサル大会】[32] 決勝戦 フットボウズ・フットサル U-18 vs 帝京長岡高等学校",
+  "source_url": "https://www.youtube.com/live/NLJrxoBrtyo",
+  "output": "output/FOOTBOZE_match_PV_reel.mp4",
+  "bgm": "output/bgm.wav",
+  "segments": [
+    {"note": "0:00 フック1 顔を上げて周りを見る選手",   "dur": 1.0, "src": null, "mode": "crop", "focus": 0.5, "zoom": 1.1, "dim": 0.35, "flash": true, "overlay": "output/overlays/01_hook_見極めろ.png"},
+    {"note": "0:01 フック2 シュート・突破の瞬間",       "dur": 1.0, "src": null, "mode": "crop", "focus": 0.5, "zoom": 1.1, "dim": 0.35, "flash": true, "overlay": "output/overlays/02_hook_決断しろ.png"},
+    {"note": "0:02 フック3 声をかけ合う場面",           "dur": 1.0, "src": null, "mode": "crop", "focus": 0.5, "zoom": 1.1, "dim": 0.35, "flash": true, "overlay": "output/overlays/03_hook_伝えろ.png"},
+
+    {"note": "0:03 大会タイトル 入場・キックオフ",      "dur": 3.0, "src": null, "mode": "fit", "dim": 0.15, "flash": true,
+     "text_y": 0.17, "text": [
+       {"t": "2016", "font": "anton", "size": 110, "color": "orange", "tracking": 8},
+       {"t": "第3回 全日本ユース(U-18)フットサル大会", "font": "noto", "size": 48, "color": "white"},
+       {"t": "決勝", "font": "dela", "size": 150, "color": "white"},
+       {"t": "vs 帝京長岡高校", "font": "noto", "size": 52, "color": "gray", "weight": "Bold"}
+     ]},
+
+    {"note": "0:06 ハイライト1 攻撃の組み立て",         "dur": 2.0, "src": null, "mode": "fit", "flash": true, "src_audio": 0.5},
+    {"note": "0:08 ハイライト2 ピヴォ当て・崩し",       "dur": 2.0, "src": null, "mode": "fit", "src_audio": 0.5},
+    {"note": "0:10 ハイライト3 シュートシーン",         "dur": 2.0, "src": null, "mode": "crop", "focus": 0.5, "src_audio": 0.6},
+    {"note": "0:12 ハイライト4 ゴール",                 "dur": 2.0, "src": null, "mode": "fit", "zoom": 1.15, "src_audio": 0.8,
+     "text_y": 0.74, "text": [{"t": "GOAL!!", "font": "anton", "size": 150, "color": "orange", "tracking": 6}]},
+    {"note": "0:14 ハイライト5 ゴール後の歓喜（スロー）", "dur": 2.0, "src": null, "mode": "crop", "focus": 0.5, "speed": 0.5, "src_audio": 0.4, "flash": true},
+    {"note": "0:16 ハイライト6 守備・GKのセーブ",       "dur": 2.0, "src": null, "mode": "fit", "src_audio": 0.5},
+
+    {"note": "0:18 結果 試合終了・整列",                "dur": 2.0, "src": null, "mode": "fit", "dim": 0.45, "flash": true,
+     "text": [
+       {"t": "結果は、", "font": "noto", "size": 64, "color": "white"},
+       {"t": "全国準優勝。", "font": "dela", "size": 140, "color": "orange"}
+     ]},
+    {"note": "0:20 あと一歩 選手の表情・表彰（スロー）",  "dur": 2.0, "src": null, "mode": "crop", "focus": 0.5, "speed": 0.6, "dim": 0.5,
+     "text": [
+       {"t": "あと一歩、", "font": "dela", "size": 110, "color": "white"},
+       {"t": "届かなかった日本一。", "font": "dela", "size": 96, "color": "white"}
+     ]},
+
+    {"note": "0:22 次の世代へ（引きの映像）",          "dur": 3.0, "src": null, "mode": "fit", "dim": 0.55, "flash": true, "overlay": "output/overlays/11_カテゴリー.png"},
+    {"note": "0:25 目指すは日本一 ベストのゴールをもう一度", "dur": 2.0, "src": null, "mode": "crop", "focus": 0.5, "dim": 0.4, "flash": true, "src_audio": 0.5, "overlay": "output/overlays/12_目指すは日本一.png"},
+
+    {"note": "0:27 エンドカード（アニメーション）",       "dur": 3.0, "card": "end"}
+  ]
+}
