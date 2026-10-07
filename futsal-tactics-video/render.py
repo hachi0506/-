@@ -152,13 +152,37 @@ def wrap(text, f, maxw):
     return lines
 
 
+def split_lines(text, f, maxw):
+    """1行に収まらなければ、句読点など自然な位置で2行に分ける。"""
+    if f.getlength(text) <= maxw:
+        return [text]
+    best = None
+    mid = len(text) / 2
+    for i in range(1, len(text)):
+        a, b = text[:i], text[i:]
+        if f.getlength(a) > maxw or f.getlength(b) > maxw:
+            continue
+        prev, nxt = text[i - 1], text[i]
+        if nxt in "、。！？」）":
+            continue
+        if prev in "、。！？" or (prev in "」）" and not ("\u3041" <= nxt <= "\u309f")):
+            score = abs(i - mid)
+        elif prev in "はがをにでとのへも" and not ("\u3041" <= nxt <= "\u309f") and nxt not in "ーァィゥェォャュョッ":
+            score = abs(i - mid) + 6
+        else:
+            continue
+        if best is None or score < best[0]:
+            best = (score, i)
+    if best is None:
+        return wrap(text, f, f.getlength(text) / 2 + 60)
+    return [text[:best[1]], text[best[1]:]]
+
+
 def subtitle_layer(text):
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     f = font(44)
-    lines = wrap(text, f, 1640)
-    if len(lines) > 1:
-        lines = wrap(text, f, f.getlength(text) / len(lines) + 60)
+    lines = split_lines(text, f, 1640)
     lh = 60
     total = lh * len(lines)
     y0 = 905 + (160 - total) // 2
@@ -535,9 +559,9 @@ def slide_base(scene, n_bullets):
                stroke_width=3, stroke_fill=(0, 0, 0))
         for i, ln in enumerate(scene["bullet_lines"][:n_bullets]):
             y = 340 + i * 120
-            d.rounded_rectangle([250, y - 46, W - 250, y + 46], radius=20, fill=(30, 41, 59))
-            d.ellipse([280, y - 18, 316, y + 18], fill=ACCENT)
-            d.text((350, y), ln, font=font(50), fill=(255, 255, 255), anchor="lm")
+            d.rounded_rectangle([170, y - 46, W - 170, y + 46], radius=20, fill=(30, 41, 59))
+            d.ellipse([200, y - 18, 236, y + 18], fill=ACCENT)
+            d.text((270, y), ln, font=font(46), fill=(255, 255, 255), anchor="lm")
     return img
 
 
