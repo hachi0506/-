@@ -3,3 +3,4 @@ out/audio*.wav
 out/*.log
 out/*.png
 !out/thumbnail.png
+__pycache__/
